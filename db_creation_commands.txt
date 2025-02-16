@@ -1,0 +1,20 @@
+python
+from market import app,db
+with app.app_context():
+    db.create_all()  # Ensures DB tables are created
+from models import Item
+
+item1= Item(name="iphone" ,price =500, barcode ="ajpdja", description="hello")
+db.session.add(item1)
+db.session.commit()
+
+item.query.all()
+
+//get the name we want
+
+do the __rept__ in the Item 
+
+def __repr__(self):
+    return f'Item{self.name}'
+
+item.query.all()
